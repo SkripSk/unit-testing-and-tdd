@@ -66,14 +66,12 @@ public class RelationshipClientAccountTest {
 
     @Test(expected = IllegalArgumentException.class)
     public void shouldGetErrorWhenNoAccounts() {
-        setUp();
 
         new RelationshipClientAccount(dummyClient, emptyList());
     }
 
     @Test
     public void shouldGetErrorWhenClientIsNull() {
-        setUp();
 
         thrown.expect(IllegalArgumentException.class);
         thrown.expectMessage("client = null");
@@ -83,7 +81,6 @@ public class RelationshipClientAccountTest {
 
     @Test
     public void shouldGetErrorWhenAccountsListIsNull(){
-        setUp();
 
         thrown.expect(IllegalArgumentException.class);
         thrown.expectMessage("savingAccountList = null or empty");
